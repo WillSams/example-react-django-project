@@ -1,6 +1,6 @@
-# Hotel Reservation React + Redux Sagas + Django Example
+# ==Work-In-Progress== Hotel Reservation React + Redux Sagas + Django Example
 
-**TypeScript, Vite, Reactjs, Redux Toolkit, Redux Sagas, Python, FastAPI, GraphQL, AsyncPG, Postgres**
+**TypeScript, Vite, Reactjs, Redux Toolkit, Redux Sagas, Python, Django Rest Framework, Postgres**
 
 [![Application Unit Tests](https://github.com/WillSams/example-react-django-project/actions/workflows/pr-validate.yml/badge.svg)](https://github.com/WillSams/example-react-django-project/actions/workflows/pr-validate.yml)
 
@@ -9,7 +9,7 @@ This example contains a frontend and backend:
 - The frontend is a [React](https://react.dev) application using [Bootstrap5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for view designs.
 - The backend is a [GraphQL API](https://graphql.org) providing the ability to create, delete, and list reservatios plus available rooms for a given date range.
 
-React [JavaScript](https://github.com/WillSams/example-js-react-with-python) + [FastAPI](), React [TypeScript](https://github.com/WillSams/example-js-react-with-python) + FastAPI, and [Express MVC](https://github.com/WillSams/example-mvc-expressjs-with-python) versions of this same idea are available.
+React [JavaScript](https://github.com/WillSams/example-js-react-with-python) + [FastAPI](https://fastapi.tiangolo.com/), React [TypeScript](https://github.com/WillSams/example-js-react-with-python) + FastAPI, and [Express MVC](https://github.com/WillSams/example-mvc-expressjs-with-python) versions of this same idea are available.
 
 **Context**:
 
@@ -57,25 +57,6 @@ curl http://localhost:$RESERVATION_PORT/development/graphql \
     -H "Authorization: Bearer ${ACCESS_TOKEN}" \
     -d '{"query": "query { getAvailableRooms( input: { checkin_date: \"2023-12-31\", checkout_date: \"2024-01-02\" }) { success errors rooms { id num_beds allow_smoking daily_rate cleaning_fee } } }" }'
 ```
-
-**Open API UI Usage**:
-
-Navigate to [http://localhost:$RESERVATION_PORT/docs](http://localhost:$RESERVATION_PORT/docs).
-
-![text](./frontend/public/img/openapi_example.png)
-
-## Pre-requisites
-
-To run the service, you will need to install the following tools.
-
-* [NodeJS](https://nodejs.org/en/)
-* [Docker](https://www.docker.com/)
-
-The below are optional but highly recommended:
-
-* [nvm](https://github.com/nvm-sh/nvm) - Used to manage NodeJS versions.
-* [Direnv](https://direnv.net/) - Used to manage environment variables.
-- Install [direnv](https://direnv.net) for persisting environment variables needed for development.
 
 ## Getting Started
 
